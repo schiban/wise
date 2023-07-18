@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 vector;
 
     // Start is called before the first frame update
-    void Start() 
+    void Start()
     {
     }
 
