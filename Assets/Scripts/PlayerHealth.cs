@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health = 100;
     public int energy = 50;
-    [SerializeField] private int experience = 0;
+    //[SerializeField] private int experience = 0;
     private int MAX_HEALTH = 100;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Damage(int amount)
+    public void Damage(int amount)
     {
         if (amount < 0)
         {
@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Heal(int amount)
+    public void Heal(int amount)
     {
         if (amount < 0)
         {
