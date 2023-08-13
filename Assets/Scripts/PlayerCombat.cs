@@ -13,15 +13,26 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
-            Attack();
+            Jab();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cross();
         }
     }
 
-    void Attack()
+    void Jab()
     {
-        // Play an attack animation
+        // Play an jab animation
+        // Detect
+    }
+
+    void Cross()
+    {
+        // Play an cross animation
         // Detect
     }
 }

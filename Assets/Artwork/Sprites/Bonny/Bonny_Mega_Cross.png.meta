@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -973,8 +973,8 @@ TextureImporter:
       Bonny_Mega_Cross_16: 2117414634
       Bonny_Mega_Cross_25: -1382454331
       Bonny_Mega_Cross_26: -1096868147
+      Bonny_Mega_Cross_24: -716571082
       Bonny_Mega_Cross_37: -2033762633
-      Bonny_Mega_Cross_22: -1945735011
       Bonny_Mega_Cross_32: -1104204714
       Bonny_Mega_Cross_17: 1000542195
       Bonny_Mega_Cross_28: 746593025
@@ -999,14 +999,14 @@ TextureImporter:
       Bonny_Mega_Cross_14: 20316521
       Bonny_Mega_Cross_30: -1897414438
       Bonny_Mega_Cross_20: -594004199
-      Bonny_Mega_Cross_13: 313665573
+      Bonny_Mega_Cross_29: 1064667504
       Bonny_Mega_Cross_11: 1967213901
       Bonny_Mega_Cross_2: 983274503
-      Bonny_Mega_Cross_29: 1064667504
-      Bonny_Mega_Cross_21: 1198417001
       Bonny_Mega_Cross_4: -706601543
+      Bonny_Mega_Cross_21: 1198417001
+      Bonny_Mega_Cross_13: 313665573
       Bonny_Mega_Cross_7: -1822895951
-      Bonny_Mega_Cross_24: -716571082
+      Bonny_Mega_Cross_22: -1945735011
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

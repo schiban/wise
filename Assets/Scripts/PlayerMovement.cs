@@ -5,47 +5,82 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 4f;
-    public Rigidbody2D rb;
+    public float walkSpeed = 2f;
+    public float runSpeed = 6f;
+    private bool isMoving;
+    private bool isRunning;
+    private Vector2 input;
     public Animator animator;
-    Vector2 vector;
+    public Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Input
-        vector = Vector2.zero;
-        vector.x = Input.GetAxisRaw("Horizontal");
-        vector.y= Input.GetAxisRaw("Vertical");
-        vector.Normalize();
-
-        UpdateAnimation();
-    }
-
-    void UpdateAnimation()
-    {
-        if (vector != Vector2.zero)
+        // Lock input while moving
+        if (!isMoving)
         {
-            UpdateMovement();
+            input.x = Input.GetAxisRaw("Horizontal");
+            input.y = Input.GetAxisRaw("Vertical");
+            // input.Normalize();
 
-            animator.SetBool("Walking", true);
-            animator.SetFloat("Horizontal", vector.x);
-            animator.SetFloat("Vertical", vector.y);
-            animator.SetFloat("Speed", vector.sqrMagnitude);
+            // Avoid diagonal animation
+            if (input.x != 0) input.y = 0;
+
+            if (input != Vector2.zero)
+            {
+                float speed = isRunning ? runSpeed : walkSpeed;
+                rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * input);
+
+                animator.SetBool("isMoving", true);
+                animator.SetFloat("moveX", input.x);
+                animator.SetFloat("moveY", input.y);
+                animator.SetFloat("speed", input.sqrMagnitude);
+            } 
+            else
+            {
+                animator.SetBool("isMoving", false);
+                animator.SetBool("isRunning", false);
+            }
+        }
+
+        // Toggle run mode
+        if (Input.GetKey(KeyCode.LeftShift) && input != Vector2.zero)
+        {
+            isRunning = true;
+            animator.SetBool("isRunning", true);
         }
         else
         {
-            animator.SetBool("Walking", false);
+            isRunning = false;
+            animator.SetBool("isRunning", false);
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && input != Vector2.zero)
+        {
+            PlayAttackAnimation("jab");
+        }
+        // else if (Input.GetKeyDown(KeyCode.Alpha2))
+        // {
+        //     PlayAttackAnimation("Cross");
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha3))
+        // {
+        //     PlayAttackAnimation("Blaze");
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha4))
+        // {
+        //     PlayAttackAnimation("MegaCross");
+        // }
     }
 
-    void UpdateMovement() {
-        // Movement
-        rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * vector);
+    private void PlayAttackAnimation(string animationName)
+    {
+        animator.SetTrigger(animationName);
+        Debug.Log(animationName);
     }
 }
