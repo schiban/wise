@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a57435faa74493a45b508904540fdb69
+guid: d3fdd2699ede86e4b92d4f2de80d1ca3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_0
+      name: Mad_Bonny_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8f5aa69ee3a2b46b45ea342f2cbce8
-      internalID: 1005034082
+      spriteID: 7f97dc4cfcb6fd248839bc7e00a4281e
+      internalID: 438347596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_1
+      name: Mad_Bonny_Walk_1
       rect:
         serializedVersion: 2
         x: 96
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9548587f2e966064f9c6ec3f622a7aaa
-      internalID: -987613838
+      spriteID: 612eabac8c72bd34e82594251315db3c
+      internalID: -581311199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_2
+      name: Mad_Bonny_Walk_2
       rect:
         serializedVersion: 2
         x: 192
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e3dc1de0d437794493dd78539d2d6be
-      internalID: 15481786
+      spriteID: 73b43a289281d1347bd93a51cdacc20f
+      internalID: 1418254261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_3
+      name: Mad_Bonny_Walk_3
       rect:
         serializedVersion: 2
         x: 288
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f145cb481e30d44855772aaa7ce66c
-      internalID: -1791427163
+      spriteID: a0c72df67fd35e44086b53f4554be444
+      internalID: 243790568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_4
+      name: Mad_Bonny_Walk_4
       rect:
         serializedVersion: 2
         x: 384
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 559afffd1604ec24fb3a64fbe1d3f56f
-      internalID: 1344115869
+      spriteID: 9d458e2bfd972bc4d97d50bb6ddb891c
+      internalID: 199672725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_5
+      name: Mad_Bonny_Walk_5
       rect:
         serializedVersion: 2
         x: 480
@@ -236,14 +236,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 763a52d03f85fb74eb99ce5e6f7a3311
-      internalID: -1400104472
+      spriteID: 70d433260c400aa4b89fe30d62577db2
+      internalID: -701456798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_6
+      name: Mad_Bonny_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9db83be0637e340a0959fb743d33b9
+      internalID: 2134054285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 192
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18eead7212c9d74297e26edaa50a7b1
+      internalID: 833910003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_8
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4087d6e9241f1e4e8a5082792774014
-      internalID: -1133188156
+      spriteID: 91da9df50eaec9f44a05770120640c45
+      internalID: -385739389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_7
+      name: Mad_Bonny_Walk_9
       rect:
         serializedVersion: 2
         x: 96
@@ -278,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36172dff27fed464faf34ab386e9e432
-      internalID: -1154352466
+      spriteID: b6c4f0a107c456f4da8971c07781ebba
+      internalID: -1040620719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_8
+      name: Mad_Bonny_Walk_10
       rect:
         serializedVersion: 2
         x: 192
@@ -299,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a68a7ee31aa99c4cb762d2a773445a3
-      internalID: -217440554
+      spriteID: 54422160437f59243b6adeffe3a8386a
+      internalID: 668106660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_9
+      name: Mad_Bonny_Walk_11
       rect:
         serializedVersion: 2
         x: 288
@@ -320,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1189e197583ce6429b58147792b5b4d
-      internalID: 693624094
+      spriteID: 247c4b3ffd294f74e8f59990484cd312
+      internalID: 623499143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_10
+      name: Mad_Bonny_Walk_12
       rect:
         serializedVersion: 2
         x: 384
@@ -341,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a107e166315b1dd48a7d49b400a9dce7
-      internalID: 1310823585
+      spriteID: 651676469efb78b41a8ba4e42d4cfd97
+      internalID: -1860799312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_11
+      name: Mad_Bonny_Walk_13
       rect:
         serializedVersion: 2
         x: 480
@@ -362,14 +404,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c1b6f11b1d51f24989c06c29eaa4eb1
-      internalID: 1335668689
+      spriteID: 2c8316a8fcdf0bb48bc3ff95d6cb9505
+      internalID: 1728993528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_12
+      name: Mad_Bonny_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d08953c2cef1a46bb5666fba40829a
+      internalID: 296621379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7a2d2641299f34eab9df19f36818fd
+      internalID: -632598258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_16
       rect:
         serializedVersion: 2
         x: 0
@@ -383,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8695a2f8c391b154cbb3cdedcacf5717
-      internalID: -464536108
+      spriteID: 47471cfb931b8584293c3ca91fd093e2
+      internalID: 55742558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_13
+      name: Mad_Bonny_Walk_17
       rect:
         serializedVersion: 2
         x: 96
@@ -404,14 +488,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f965aa884da6df44780fb7c657bb9967
-      internalID: 625458841
+      spriteID: 5fb37002c9809c94a80a8edd0fb8a329
+      internalID: -2096625193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_14
+      name: Mad_Bonny_Walk_18
       rect:
         serializedVersion: 2
         x: 192
@@ -425,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bee9020093c30d0448fbda190b6ddfd1
-      internalID: 1798213794
+      spriteID: f307fec217286c347816b6b8151d1941
+      internalID: 800340840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_15
+      name: Mad_Bonny_Walk_19
       rect:
         serializedVersion: 2
         x: 288
@@ -446,14 +530,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c445976b1c4e2e945a76341cbda243c1
-      internalID: -82214281
+      spriteID: d780e3aabdb309647ba90ef6b10cc566
+      internalID: 1888442194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_16
+      name: Mad_Bonny_Walk_20
       rect:
         serializedVersion: 2
         x: 384
@@ -467,14 +551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de407ec764dd5e4ab659ac410cb03c0
-      internalID: 1882971811
+      spriteID: b05becf2104b194459d8841d049692ea
+      internalID: 312890631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_17
+      name: Mad_Bonny_Walk_21
       rect:
         serializedVersion: 2
         x: 480
@@ -488,14 +572,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4146a11d2c3fe0d4c9eaa4fa6a922e10
-      internalID: -323865908
+      spriteID: 8db6ff08e16c19e46b5da9c40f5af207
+      internalID: -1588230456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_18
+      name: Mad_Bonny_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4dd6183f6d81e44b7019c5bb556502
+      internalID: -1048845449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3285294b03cab7646a032e065384e18d
+      internalID: 204404732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_24
       rect:
         serializedVersion: 2
         x: 0
@@ -509,14 +635,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a204a3140a21440a66e07d64c05f92
-      internalID: 893470078
+      spriteID: e11288d7b91231340b6b7fa7fc4abd10
+      internalID: -2000052742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_19
+      name: Mad_Bonny_Walk_25
       rect:
         serializedVersion: 2
         x: 96
@@ -530,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfd8c417afddf3042af2060143266be9
-      internalID: 1926587797
+      spriteID: 88a7a5868815bfb4393d3c8c9897d088
+      internalID: 2059897310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_20
+      name: Mad_Bonny_Walk_26
       rect:
         serializedVersion: 2
         x: 192
@@ -551,14 +677,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 268962d3f6b73dd4c8a3c1a44f35b491
-      internalID: 1223566221
+      spriteID: 09b03287c5fac5a4f90729e4c1afd975
+      internalID: -1559454277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_21
+      name: Mad_Bonny_Walk_27
       rect:
         serializedVersion: 2
         x: 288
@@ -572,14 +698,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeff0a8f1aa2f1149b149bf95da3538a
-      internalID: -1192461793
+      spriteID: 4c3b35f76ea5cfb4cacff6f2ff030125
+      internalID: 169188209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_22
+      name: Mad_Bonny_Walk_28
       rect:
         serializedVersion: 2
         x: 384
@@ -593,14 +719,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a001b398c3bf094796731267b6a7038
-      internalID: 1582064604
+      spriteID: 3ca44ff4e49470f4794ea967c1bbaf17
+      internalID: -1549764602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Cross_23
+      name: Mad_Bonny_Walk_29
       rect:
         serializedVersion: 2
         x: 480
@@ -614,8 +740,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f414b905be055740a4c8dc84bbb5bbe
-      internalID: -259034527
+      spriteID: 1f3f470794e59b04fa098f50ff30a91d
+      internalID: 33660208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_30
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6655d66a9a7844ba2c7008f93bf08d
+      internalID: -848500813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mad_Bonny_Walk_31
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c7bc364b3d8584499c8d2f880d8068
+      internalID: 543358889
       vertices: []
       indices: 
       edges: []
@@ -631,30 +799,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mad_Bonny_Cross_18: 893470078
-      Mad_Bonny_Cross_23: -259034527
-      Mad_Bonny_Cross_0: 1005034082
-      Mad_Bonny_Cross_19: 1926587797
-      Mad_Bonny_Cross_20: 1223566221
-      Mad_Bonny_Cross_11: 1335668689
-      Mad_Bonny_Cross_1: -987613838
-      Mad_Bonny_Cross_4: 1344115869
-      Mad_Bonny_Cross_12: -464536108
-      Mad_Bonny_Cross_21: -1192461793
-      Mad_Bonny_Cross_2: 15481786
-      Mad_Bonny_Cross_10: 1310823585
-      Mad_Bonny_Cross_22: 1582064604
-      Mad_Bonny_Cross_7: -1154352466
-      Mad_Bonny_Cross_9: 693624094
-      Mad_Bonny_Cross_8: -217440554
-      Mad_Bonny_Cross_14: 1798213794
-      Mad_Bonny_Cross_15: -82214281
-      Mad_Bonny_Cross_16: 1882971811
-      Mad_Bonny_Cross_3: -1791427163
-      Mad_Bonny_Cross_6: -1133188156
-      Mad_Bonny_Cross_5: -1400104472
-      Mad_Bonny_Cross_17: -323865908
-      Mad_Bonny_Cross_13: 625458841
+      Mad_Bonny_Walk_10: 668106660
+      Mad_Bonny_Walk_9: -1040620719
+      Mad_Bonny_Walk_25: 2059897310
+      Mad_Bonny_Walk_26: -1559454277
+      Mad_Bonny_Walk_17: -2096625193
+      Mad_Bonny_Walk_31: 543358889
+      Mad_Bonny_Walk_21: -1588230456
+      Mad_Bonny_Walk_30: -848500813
+      Mad_Bonny_Walk_1: -581311199
+      Mad_Bonny_Walk_6: 2134054285
+      Mad_Bonny_Walk_28: -1549764602
+      Mad_Bonny_Walk_8: -385739389
+      Mad_Bonny_Walk_12: -1860799312
+      Mad_Bonny_Walk_2: 1418254261
+      Mad_Bonny_Walk_4: 199672725
+      Mad_Bonny_Walk_22: -1048845449
+      Mad_Bonny_Walk_14: 296621379
+      Mad_Bonny_Walk_20: 312890631
+      Mad_Bonny_Walk_24: -2000052742
+      Mad_Bonny_Walk_0: 438347596
+      Mad_Bonny_Walk_5: -701456798
+      Mad_Bonny_Walk_13: 1728993528
+      Mad_Bonny_Walk_19: 1888442194
+      Mad_Bonny_Walk_11: 623499143
+      Mad_Bonny_Walk_29: 33660208
+      Mad_Bonny_Walk_27: 169188209
+      Mad_Bonny_Walk_16: 55742558
+      Mad_Bonny_Walk_18: 800340840
+      Mad_Bonny_Walk_3: 243790568
+      Mad_Bonny_Walk_7: 833910003
+      Mad_Bonny_Walk_15: -632598258
+      Mad_Bonny_Walk_23: 204404732
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

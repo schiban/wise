@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 275a65a9248f8af40b917cbe2ac9efd3
+guid: 16d2c1a173115cd40bc87a21f0fda6f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mad_Bonny_Run_0
+      name: Mad_Bonny_Death_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bcce816fcca9d8469912788e3ac95e0
-      internalID: 2047443601
+      spriteID: aa912984da523d74fa859785b9f03006
+      internalID: -389603737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_1
+      name: Mad_Bonny_Death_1
       rect:
         serializedVersion: 2
         x: 96
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7be5ed8f29f5024ca2aa4e6541b8698
-      internalID: -1710906743
+      spriteID: 6ab684448f75ea74094a4c4fcab93131
+      internalID: 2105191194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_2
+      name: Mad_Bonny_Death_2
       rect:
         serializedVersion: 2
         x: 192
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87c95493d349e74e877d098ed1ea5ad
-      internalID: 744290423
+      spriteID: e3096e0b4b8b82142b50629756b55af6
+      internalID: 117869213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_3
+      name: Mad_Bonny_Death_3
       rect:
         serializedVersion: 2
         x: 288
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac7da234ae5e0748a80613ae26919b8
-      internalID: -72257021
+      spriteID: 805962f2a10f41742a3587ae94392410
+      internalID: -798715903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_4
+      name: Mad_Bonny_Death_4
       rect:
         serializedVersion: 2
         x: 384
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b32bfd419874d4ca59a8caa4438fb7
-      internalID: 1733076865
+      spriteID: 6f5a4d8e7a2030d4bb6b8724cd6b81d8
+      internalID: 1368167674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_5
+      name: Mad_Bonny_Death_5
       rect:
         serializedVersion: 2
         x: 480
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc75953f5810c014aa90a078f172cc96
-      internalID: 1949434711
+      spriteID: 4431db6b6e8ff9a4e94ff82098e3658e
+      internalID: -1245663507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_6
+      name: Mad_Bonny_Death_6
       rect:
         serializedVersion: 2
         x: 576
@@ -257,35 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b30f128ab34f74485efcd6ac65d078
-      internalID: -1552273491
+      spriteID: 58e05b93ca980524786d16886b859b17
+      internalID: -1256238336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 192
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8dd429d0682c4948a402369fa872b90
-      internalID: -702007343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mad_Bonny_Run_8
+      name: Mad_Bonny_Death_7
       rect:
         serializedVersion: 2
         x: 0
@@ -299,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1259bc68eda45fc4aa75fc2153d81b61
-      internalID: 1745415148
+      spriteID: 500c78b293617e54cb594da00166cff7
+      internalID: -1497826876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_9
+      name: Mad_Bonny_Death_8
       rect:
         serializedVersion: 2
         x: 96
@@ -320,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0fde1bf935b5f04b9e5832ed2454d84
-      internalID: 2843733
+      spriteID: 8632b0fd0986c7c40a1da42ac4822312
+      internalID: -1536380108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_10
+      name: Mad_Bonny_Death_9
       rect:
         serializedVersion: 2
         x: 192
@@ -341,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bdff877750b65e43888cff7da607737
-      internalID: 730548696
+      spriteID: 1058097412c4b4e4686af600f656d82d
+      internalID: -1525947747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_11
+      name: Mad_Bonny_Death_10
       rect:
         serializedVersion: 2
         x: 288
@@ -362,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c13e2f43bdb5d9c4dad5f02750b4401b
-      internalID: -1174557653
+      spriteID: b82822283d81fa14eb7545c3d01942ad
+      internalID: -793104665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_12
+      name: Mad_Bonny_Death_11
       rect:
         serializedVersion: 2
         x: 384
@@ -383,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4556fceccbf55fb47b0b48dde8e30047
-      internalID: -1075926419
+      spriteID: ca47879fdc8a7654688e467e3f999cb8
+      internalID: 103475980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_13
+      name: Mad_Bonny_Death_12
       rect:
         serializedVersion: 2
         x: 480
@@ -404,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb1e713d017a1f4b9f75c0363adebf3
-      internalID: 1062081192
+      spriteID: f42b381f01b114846b82ce57727d1765
+      internalID: -832373270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_14
+      name: Mad_Bonny_Death_13
       rect:
         serializedVersion: 2
         x: 576
@@ -425,35 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15fba3bd86a08e41a8149ae6abfc2e7
-      internalID: 1947579689
+      spriteID: ffa28add25de961409bc8e823159290f
+      internalID: -362092534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_15
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 128
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a72c0d971c0987147917afcf4eb6f0f6
-      internalID: 1171224228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mad_Bonny_Run_16
+      name: Mad_Bonny_Death_14
       rect:
         serializedVersion: 2
         x: 0
@@ -467,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78dc6f74b8c88fd4d9f7bef6c3749ce6
-      internalID: -508149739
+      spriteID: 4f633d41cfb05b04d8742aae693035a6
+      internalID: -1488629593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_17
+      name: Mad_Bonny_Death_15
       rect:
         serializedVersion: 2
         x: 96
@@ -488,14 +446,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4dba6d6728484348a2311f7a8fafb94
-      internalID: 307332330
+      spriteID: 9a860a3328fec26499896c455c08baa1
+      internalID: 945674191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_18
+      name: Mad_Bonny_Death_16
       rect:
         serializedVersion: 2
         x: 192
@@ -509,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d14b2d304972745a3b9e0b06c1b65e
-      internalID: 1396332769
+      spriteID: 8c06872297e34a0429c0c384b8cb567e
+      internalID: 566571208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_19
+      name: Mad_Bonny_Death_17
       rect:
         serializedVersion: 2
         x: 288
@@ -530,14 +488,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ac23034ed92e4741b3098f59f51fc40
-      internalID: 139992686
+      spriteID: efa521275b22d9d488118c00b4955afe
+      internalID: -1520329480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_20
+      name: Mad_Bonny_Death_18
       rect:
         serializedVersion: 2
         x: 384
@@ -551,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ef18c1e8d753c04b8afbd352f7baf27
-      internalID: -1418262656
+      spriteID: 66638b4d4001ba444826c14a61a33232
+      internalID: 51236472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_21
+      name: Mad_Bonny_Death_19
       rect:
         serializedVersion: 2
         x: 480
@@ -572,14 +530,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c47dd5dbde4ad84e8cee1ea936ea808
-      internalID: 251352478
+      spriteID: 5eeeac313e8c2014fa55914293be30a5
+      internalID: -835950008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_22
+      name: Mad_Bonny_Death_20
       rect:
         serializedVersion: 2
         x: 576
@@ -593,35 +551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5036bee2533accd4dacfa3808203a452
-      internalID: -1107535203
+      spriteID: 2fa8fd3f6b7802646b1ed7ecc3172e3e
+      internalID: -756476146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_23
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 64
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 639a32e879708b74fa4052ed0489e508
-      internalID: -576184398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mad_Bonny_Run_24
+      name: Mad_Bonny_Death_21
       rect:
         serializedVersion: 2
         x: 0
@@ -635,14 +572,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d08f97d849d44c4e961f86dab7691ef
-      internalID: -1703635924
+      spriteID: 9048e51ffd8fb044aafbde5a9df9b985
+      internalID: -364115919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_25
+      name: Mad_Bonny_Death_22
       rect:
         serializedVersion: 2
         x: 96
@@ -656,14 +593,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd0dabd4c26f9046ad29e95eda9e957
-      internalID: 137838919
+      spriteID: bd89480b96ff52246a839a6c34b58b0f
+      internalID: -593000261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_26
+      name: Mad_Bonny_Death_23
       rect:
         serializedVersion: 2
         x: 192
@@ -677,14 +614,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eee441dc887d8f4380aea0b3c53a7e1
-      internalID: 1896803935
+      spriteID: e26fc14463aa5ea4eb0d161ff9e53591
+      internalID: 1835405913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_27
+      name: Mad_Bonny_Death_24
       rect:
         serializedVersion: 2
         x: 288
@@ -698,14 +635,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f056ab9655e2e44aba72642fbd9c078
-      internalID: 250052021
+      spriteID: dd1f62d9507954941ad4c1595ce98eab
+      internalID: 633637132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_28
+      name: Mad_Bonny_Death_25
       rect:
         serializedVersion: 2
         x: 384
@@ -719,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5bc23f62a4985943ac4131a644ec607
-      internalID: -1587328716
+      spriteID: f0a92a025abde144b868b30fde0a691c
+      internalID: 544874892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_29
+      name: Mad_Bonny_Death_26
       rect:
         serializedVersion: 2
         x: 480
@@ -740,14 +677,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36695481f537b7e42939345e1151d9c0
-      internalID: -986753933
+      spriteID: 7d67021933e0ec8448f7b0d377dbcca2
+      internalID: 1129691579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mad_Bonny_Run_30
+      name: Mad_Bonny_Death_27
       rect:
         serializedVersion: 2
         x: 576
@@ -761,29 +698,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c359c3f72745507488a928be84cf5df7
-      internalID: -1928746914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mad_Bonny_Run_31
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89cf89032189ad94882d8af571495a69
-      internalID: -1818981067
+      spriteID: 7c34d45e344931c429cc216e78cff7a0
+      internalID: 1963106789
       vertices: []
       indices: 
       edges: []
@@ -799,38 +715,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mad_Bonny_Run_0: 2047443601
-      Mad_Bonny_Run_4: 1733076865
-      Mad_Bonny_Run_7: -702007343
-      Mad_Bonny_Run_17: 307332330
-      Mad_Bonny_Run_27: 250052021
-      Mad_Bonny_Run_23: -576184398
-      Mad_Bonny_Run_6: -1552273491
-      Mad_Bonny_Run_20: -1418262656
-      Mad_Bonny_Run_18: 1396332769
-      Mad_Bonny_Run_26: 1896803935
-      Mad_Bonny_Run_21: 251352478
-      Mad_Bonny_Run_25: 137838919
-      Mad_Bonny_Run_12: -1075926419
-      Mad_Bonny_Run_14: 1947579689
-      Mad_Bonny_Run_15: 1171224228
-      Mad_Bonny_Run_16: -508149739
-      Mad_Bonny_Run_28: -1587328716
-      Mad_Bonny_Run_3: -72257021
-      Mad_Bonny_Run_5: 1949434711
-      Mad_Bonny_Run_1: -1710906743
-      Mad_Bonny_Run_9: 2843733
-      Mad_Bonny_Run_10: 730548696
-      Mad_Bonny_Run_24: -1703635924
-      Mad_Bonny_Run_30: -1928746914
-      Mad_Bonny_Run_2: 744290423
-      Mad_Bonny_Run_8: 1745415148
-      Mad_Bonny_Run_11: -1174557653
-      Mad_Bonny_Run_31: -1818981067
-      Mad_Bonny_Run_13: 1062081192
-      Mad_Bonny_Run_19: 139992686
-      Mad_Bonny_Run_22: -1107535203
-      Mad_Bonny_Run_29: -986753933
+      Mad_Bonny_Death_5: -1245663507
+      Mad_Bonny_Death_13: -362092534
+      Mad_Bonny_Death_8: -1536380108
+      Mad_Bonny_Death_16: 566571208
+      Mad_Bonny_Death_10: -793104665
+      Mad_Bonny_Death_19: -835950008
+      Mad_Bonny_Death_25: 544874892
+      Mad_Bonny_Death_1: 2105191194
+      Mad_Bonny_Death_14: -1488629593
+      Mad_Bonny_Death_15: 945674191
+      Mad_Bonny_Death_20: -756476146
+      Mad_Bonny_Death_2: 117869213
+      Mad_Bonny_Death_27: 1963106789
+      Mad_Bonny_Death_0: -389603737
+      Mad_Bonny_Death_11: 103475980
+      Mad_Bonny_Death_7: -1497826876
+      Mad_Bonny_Death_12: -832373270
+      Mad_Bonny_Death_17: -1520329480
+      Mad_Bonny_Death_3: -798715903
+      Mad_Bonny_Death_9: -1525947747
+      Mad_Bonny_Death_18: 51236472
+      Mad_Bonny_Death_21: -364115919
+      Mad_Bonny_Death_22: -593000261
+      Mad_Bonny_Death_4: 1368167674
+      Mad_Bonny_Death_23: 1835405913
+      Mad_Bonny_Death_26: 1129691579
+      Mad_Bonny_Death_24: 633637132
+      Mad_Bonny_Death_6: -1256238336
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
