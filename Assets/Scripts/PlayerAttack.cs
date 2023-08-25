@@ -9,6 +9,10 @@ public class PlayerAttack : MonoBehaviour
     public float cooldown;
     public bool isWise;
 
+    public GameObject attackPoint;
+    public float radius;
+    public LayerMask enemies;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +37,23 @@ public class PlayerAttack : MonoBehaviour
         animator.SetBool("isWise", false);
     }
 
-    void Jab()
+    public void Jab()
     {
         animator.SetTrigger("Jab");
         if (isWise)
             Debug.Log("Jab Wise");
         else
             Debug.Log("Jab");
+
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            Debug.Log("Enemy hit");
+        }
     }
 
-    void Cross()
+    public void Cross()
     {
         animator.SetTrigger("Cross");
         if (isWise)
@@ -51,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Cross");
     }
 
-    void MegaCross()
+    public void MegaCross()
     {
         animator.SetTrigger("MegaCross");
         if (isWise)
@@ -60,7 +71,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Mega Cross");
     }
 
-    void Wise()
+    public void Wise()
     {
         animator.SetTrigger("Wise");
         isWise = true;
@@ -78,7 +89,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator ResetWise()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(20);
         animator.SetLayerWeight(1, 0);
         isWise = false;
     }

@@ -11,17 +11,17 @@ TagManager:
   - 
   - Water
   - UI
-  - 
   - Player
-  - SolidObjects
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC
+  - Buildings
+  - Objects
+  - Grass
+  - Sand
+  - Ground
+  - Trees
+  - Dirt
+  - Rocks
   - 
   - 
   - 
@@ -38,15 +38,42 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 1401436197
+    locked: 0
+  - name: Water
+    uniqueID: 657810075
+    locked: 0
+  - name: Grass
+    uniqueID: 2080560775
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Background
     uniqueID: 562773587
     locked: 0
+  - name: Rocks
+    uniqueID: 627842987
+    locked: 0
+  - name: Buildings
+    uniqueID: 2324174661
+    locked: 0
+  - name: Structures
+    uniqueID: 2376728415
+    locked: 0
+  - name: Objects
+    uniqueID: 3995277011
+    locked: 0
+  - name: Trees
+    uniqueID: 957939951
+    locked: 0
+  - name: NPC
+    uniqueID: 3849888671
+    locked: 0
+  - name: Enemy
+    uniqueID: 2406719353
+    locked: 0
   - name: Player
     uniqueID: 2499282669
-    locked: 0
-  - name: Foreground
-    uniqueID: 3849888671
     locked: 0
