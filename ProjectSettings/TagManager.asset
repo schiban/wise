@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Trees
   - Dirt
   - Rocks
-  - 
+  - Foreground
   - 
   - 
   - 
@@ -38,20 +39,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Ground
-    uniqueID: 1401436197
+  - name: Background
+    uniqueID: 562773587
     locked: 0
   - name: Water
     uniqueID: 657810075
     locked: 0
+  - name: Ground
+    uniqueID: 1401436197
+    locked: 0
   - name: Grass
     uniqueID: 2080560775
     locked: 0
+  - name: Foreground
+    uniqueID: 2190884771
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 562773587
     locked: 0
   - name: Rocks
     uniqueID: 627842987
