@@ -84,7 +84,6 @@ public class Player : MonoBehaviour
             /// </summary>
 
             if (input.x != 0) input.y = 0;
-            
 
             /// <summary>
             /// Condição que é executada se o valor registado é diferente de Vector2(0,0), isto é, a última posição registada do objeto
@@ -169,12 +168,12 @@ public class Player : MonoBehaviour
         if (isWise) Debug.Log("Cross Wise");
         else Debug.Log("Cross");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
-        foreach (Collider2D enemyGameObject in enemy)
+        foreach (Collider2D enemy in enemies)
         {
+            enemy.GetComponent<EnemyHealth>().health -= _cross;
             Debug.Log("Enemy hit");
-            enemyGameObject.GetComponent<EnemyHealth>().health -= _cross;
         }
     }
 
@@ -187,12 +186,12 @@ public class Player : MonoBehaviour
         else
             Debug.Log("Mega Cross");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
-        foreach (Collider2D enemyGameObject in enemy)
+        foreach (Collider2D enemy in enemies)
         {
             Debug.Log("Enemy hit");
-            enemyGameObject.GetComponent<EnemyHealth>().health -= _megaCross;
+            enemy.GetComponent<EnemyHealth>().health -= _megaCross;
         }
     }
 

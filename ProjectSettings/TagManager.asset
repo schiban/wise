@@ -24,7 +24,7 @@ TagManager:
   - Dirt
   - Rocks
   - Foreground
-  - 
+  - Stairs
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Grass
     uniqueID: 2080560775
+    locked: 0
+  - name: Stairs
+    uniqueID: 1100974711
     locked: 0
   - name: Foreground
     uniqueID: 2190884771
