@@ -17,12 +17,10 @@ public class DialogueControl : MonoBehaviour
     private int index;
     private bool isTyping = false;
 
-    public void Speech(Sprite p, string[] txt, string actorName)
+    public void Speech(string[] txt)
     {
         dialogueObject.SetActive(true);
-        profile.sprite = p;
         sentences = txt;
-        actorNameText.text = actorName;
         StartCoroutine(TypeSentence());
     }
 
@@ -48,10 +46,8 @@ public class DialogueControl : MonoBehaviour
 
     public void NextSentence()
     {
-        if (isTyping)  // Check if typing is in progress
-        {
-            return;
-        }
+        if (isTyping) return; // Check if typing is in progress 
+
         if(speechText.text.Length == sentences[index].Length)
         {
             // ainda tem textos
@@ -67,6 +63,12 @@ public class DialogueControl : MonoBehaviour
                 speechText.text = "";
                 index = 0;
                 dialogueObject.SetActive(false);
+                // Access the Dialogue script and set the isDialogueActive value
+                Dialogue dialogueScript = FindObjectOfType<Dialogue>();
+                if (dialogueScript != null)
+                    dialogueScript.SetDialogueActive(false); // Change the value as needed
+
+                // GetComponent<Dialogue>().isDialogueActive = false;
             }
         }
     }

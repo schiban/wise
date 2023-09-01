@@ -13,7 +13,7 @@ public class Dialogue : MonoBehaviour
     public float radius;
 
     private DialogueControl dc;
-    private bool isDialogueActive;
+    public bool isDialogueActive;
     bool onRadius;
     
     private void Start()
@@ -30,10 +30,16 @@ public class Dialogue : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T) && onRadius && !isDialogueActive)
         {
-            dc.Speech(profile, speechTxt, actorName);
+            dc.Speech(speechTxt);
             isDialogueActive = true;
         }
     }
+
+    public void SetDialogueActive(bool isActive)
+    {
+        isDialogueActive = isActive;
+    }
+    
 
     public void Interact()
     {
@@ -46,6 +52,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             onRadius = false;
+            isDialogueActive = false;
         }
     }
 

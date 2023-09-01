@@ -22,6 +22,7 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth = health;
             animator.SetTrigger("Hit");
+            
         }
 
         if (health <= 0)

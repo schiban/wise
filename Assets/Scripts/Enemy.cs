@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     private float canAttack;
     private Transform target;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (target != null)
         {
@@ -35,19 +35,5 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            target = other.transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            target = null;
-        }
-    }
+    
 }
