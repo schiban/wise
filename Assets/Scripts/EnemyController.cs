@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public Transform homePosition;
 
     [SerializeField] private float speed;
+    private float currentSpeed;
     [SerializeField] private float maxRange;
     [SerializeField] private float minRange;
 

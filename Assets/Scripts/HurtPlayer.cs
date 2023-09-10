@@ -5,38 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class HurtPlayer : MonoBehaviour
 {
-    private float waitToLoad = 2f;
-    private bool reloading;
-    public int damageToGive = 5;
+    public int damageToGive;
+
+    private HealthManager healthManager;
+    private float waitToHurt = 2f;
+    private bool isTouching;
+
+    private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if (reloading)
-        {
-            waitToLoad -= Time.deltaTime;
-            if (waitToLoad <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-        }
+        healthManager = FindObjectOfType<HealthManager>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isTouching)
+        {
+            waitToHurt-= Time.deltaTime;
+            if (waitToHurt <= 0)
+            {
+                Cross();
+                waitToHurt = 2f;
+            }
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void Cross()
     {
-        if (other.collider.tag == "Player")
+        animator.SetTrigger("Cross");
+        healthManager.HurtPlayer(damageToGive);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
         {
-            // EnemyHealthManager healthManager;
-            // healthManager = other.gameObject.GetComponent<EnemyHealthManager>();
-            // healthManager.HurtEnemy(damageToGive);
-            other.gameObject.SetActive(false);
-            reloading = true;
+            isTouching = true;
+            waitToHurt = 0f;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            isTouching = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            isTouching = false;
+            waitToHurt = 2f;
         }
     }
 }

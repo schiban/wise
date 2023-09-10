@@ -7,8 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float currentHealth;
     private Animator animator;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -27,7 +26,15 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("Enemy is dead");
+            animator.SetBool("isDead", true);
+            StartCoroutine(Death());
         }
+    }
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(1);
+
+        gameObject.SetActive(false);
     }
 }
