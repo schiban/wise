@@ -25,7 +25,7 @@ TagManager:
   - Rocks
   - Foreground
   - Stairs
-  - 
+  - Minimap
   - 
   - 
   - 
@@ -54,14 +54,14 @@ TagManager:
   - name: Foreground
     uniqueID: 2190884771
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Buildings
     uniqueID: 2324174661
     locked: 0
   - name: Rocks
     uniqueID: 627842987
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Structures
     uniqueID: 2376728415
