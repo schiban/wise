@@ -28,7 +28,7 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T) && onRadius && !isDialogueActive)
+        if(Input.GetKeyDown(KeyCode.Space) && onRadius && !isDialogueActive)
         {
             dc.Speech(speechTxt);
             isDialogueActive = true;

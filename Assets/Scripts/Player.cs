@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+    
 
     // Update é executado em cada frame
     void Update()
@@ -108,6 +109,13 @@ public class Player : MonoBehaviour
                 animator.SetBool("isMoving", false);
                 animator.SetBool("isRunning", false);
             }
+        }
+
+        if (animator.GetBool("isDead") == true)
+        {
+            animator.SetFloat("speed", 0);
+            animator.SetBool("isMoving", false);
+            animator.SetBool("isRunning", false);
         }
 
         /// <summary>
@@ -239,4 +247,6 @@ public class Player : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    
 }

@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     private HealthManager healthManager;
     public Slider healthBar;
 
-    void Start()
+    void Awake()
     {
         healthManager = FindObjectOfType<HealthManager>();
     }
@@ -16,6 +16,6 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         healthBar.maxValue = healthManager.maxHealth;
-        healthBar.value = healthManager.currentHealth;
+        healthBar.value = healthManager.health;
     }
 }

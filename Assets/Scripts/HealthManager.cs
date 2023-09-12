@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public int currentHealth;
+    public int health;
     public int maxHealth;
+    private Animator animator;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        health = maxHealth;
     }
 
     public void HurtPlayer(int damageToGive)
     {
-        currentHealth -= damageToGive;
-        if (currentHealth <= 0)
+        animator.SetTrigger("Hit");
+        health -= damageToGive;
+        if (health <= 0)
         {
+            animator.SetBool("isDead", true);
             Debug.Log("Player died");
         }
     }

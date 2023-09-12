@@ -6,30 +6,41 @@ using UnityEngine.SceneManagement;
 public class HurtPlayer : MonoBehaviour
 {
     public int damageToGive;
-
     private HealthManager healthManager;
     private float waitToHurt = 2f;
     private bool isTouching;
-
     private Animator animator;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Variáveis associadas ao Player
+    /// </summary>
+    private GameObject player;
+    private Animator playerAnimation;
+    private bool isDead;
+
     void Awake()
     {
         healthManager = FindObjectOfType<HealthManager>();
         animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerAnimation = player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isTouching)
+        isDead = playerAnimation.GetBool("isDead");
+
+        if (!isDead)
         {
-            waitToHurt-= Time.deltaTime;
-            if (waitToHurt <= 0)
+            if (isTouching)
             {
-                Cross();
-                waitToHurt = 2f;
+                waitToHurt-= Time.deltaTime;
+                if (waitToHurt <= 0)
+                {
+                    Cross();
+                    waitToHurt = 2f;
+                }
             }
         }
     }

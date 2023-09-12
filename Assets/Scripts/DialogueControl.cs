@@ -16,6 +16,11 @@ public class DialogueControl : MonoBehaviour
     private string[] sentences;
     private int index;
     private bool isTyping = false;
+    Dialogue dialogueScript;
+
+    void Awake() {
+        dialogueScript = FindObjectOfType<Dialogue>();
+    }
 
     public void Speech(string[] txt)
     {
@@ -26,10 +31,13 @@ public class DialogueControl : MonoBehaviour
 
     private void Update()
     {
-        // Listen for keyboard input to advance dialogue
-        if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
+        if (dialogueScript.isDialogueActive == true)
         {
-            NextSentence();
+            // Listen for keyboard input to advance dialogue
+            if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
+            {
+                NextSentence();
+            }
         }
     }
 
@@ -64,7 +72,6 @@ public class DialogueControl : MonoBehaviour
                 index = 0;
                 dialogueObject.SetActive(false);
                 // Access the Dialogue script and set the isDialogueActive value
-                Dialogue dialogueScript = FindObjectOfType<Dialogue>();
                 if (dialogueScript != null)
                     dialogueScript.SetDialogueActive(false); // Change the value as needed
 
