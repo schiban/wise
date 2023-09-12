@@ -5,22 +5,27 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [Header("Definições")]
     public Animator animator;
-    public float cooldown;
-    public bool isWise;
-
-    public GameObject attackPoint;
-    public float radius;
+    public Transform attackPoint;
     public LayerMask enemies;
+    public bool isWise;
+    public float radius = 1f;
+    public float jabDamage; private float jab;
+    public float crossDamage; private float cross;
+    public float megaCrossDamage; private float megaCross;
+    public float wiseDamage;
 
-    // Start is called before the first frame update
-    void Start()
+    void Start() // Start() é chamado no primeiro frame quando o script é iniciado
     {
         animator = GetComponent<Animator>();
+        jab = jabDamage;
+        cross = crossDamage;
+        megaCross = megaCrossDamage;
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() // Update() é chamado uma vez por frame
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Jab();
@@ -41,15 +46,19 @@ public class PlayerAttack : MonoBehaviour
     {
         animator.SetTrigger("Jab");
         if (isWise)
+        {
             Debug.Log("Jab Wise");
+            jab *= wiseDamage;
+        }
         else
             Debug.Log("Jab");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
 
         foreach (Collider2D enemyGameObject in enemy)
         {
             Debug.Log("Enemy hit");
+            enemyGameObject.GetComponent<EnemyHealth>().health -= jab;
         }
     }
 
@@ -57,18 +66,40 @@ public class PlayerAttack : MonoBehaviour
     {
         animator.SetTrigger("Cross");
         if (isWise)
+        {
             Debug.Log("Cross Wise");
+            cross *= wiseDamage;
+        }
         else
             Debug.Log("Cross");
+
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            Debug.Log("Enemy hit");
+            enemyGameObject.GetComponent<EnemyHealth>().health -= cross;
+        }
     }
 
     public void MegaCross()
     {
         animator.SetTrigger("MegaCross");
         if (isWise)
+        {
             Debug.Log("Mega Cross Wise");
+            megaCross *= wiseDamage;
+        }
         else
             Debug.Log("Mega Cross");
+
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            Debug.Log("Enemy hit");
+            enemyGameObject.GetComponent<EnemyHealth>().health -= megaCross;
+        }
     }
 
     public void Wise()
@@ -92,5 +123,10 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(20);
         animator.SetLayerWeight(1, 0);
         isWise = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, radius);
     }
 }

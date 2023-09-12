@@ -4,67 +4,26 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
-    public int energy = 50;
-    //[SerializeField] private int experience = 0;
-    private int MAX_HEALTH = 100;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float health = 0f;
+    [SerializeField] private float maxHealth = 100f;
+
+    private void Start()
     {
-        
+        health = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealth(float mod)
     {
-        if(Input.GetKeyDown(KeyCode.D))
+        health += mod;
+
+        if (health > maxHealth)
         {
-            Damage(10);
+            health = maxHealth;
         }
-
-        if (Input.GetKeyDown(KeyCode.H))
+        else if (health <= 0)
         {
-            Heal(10);
+            health = 0f;
+            Debug.Log("Player Respawn");
         }
-    }
-
-    public void Damage(int amount)
-    {
-        if (amount < 0)
-        {
-            throw new System.ArgumentOutOfRangeException("Cannot have negative damage");
-        }
-
-        this.health -= amount;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void Heal(int amount)
-    {
-        if (amount < 0)
-        {
-            throw new System.ArgumentOutOfRangeException("Cannot have negative healing");
-        }
-
-        bool maxHealth = health + amount > MAX_HEALTH;
-
-        if (maxHealth)
-        {
-            this.health = MAX_HEALTH;
-        }
-        else
-        {
-            this.health += amount;
-        }
-
-    }
-
-    void Die()
-    {
-        Debug.Log("Avyr died!");
     }
 }
