@@ -5,12 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public GameObject introUI;
     public GameObject loaderUI;
+    public GameObject mainMenuUI;
+    public GameObject helpUI;
+    public GameObject creditsUI;
+    public GameObject exitUI;
     public Slider progressSlider;
 
-    public void LoadScene(int index)
+    public void MainMenuScene(int index)
+    {
+        introUI.SetActive(false);
+        helpUI.SetActive(false);
+        creditsUI.SetActive(false);
+        exitUI.SetActive(false);
+        mainMenuUI.SetActive(true);
+    }
+
+    public void PlayScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index));
+    }
+
+    public void HelpScene(int index)
+    {
+        mainMenuUI.SetActive(false);
+        helpUI.SetActive(true);
+    }
+
+    public void CreditsScene(int index)
+    {
+        mainMenuUI.SetActive(false);
+        creditsUI.SetActive(true);
+    }
+
+    public void ExitScene(int index)
+    {
+        mainMenuUI.SetActive(false);
+        exitUI.SetActive(true);
+    }
+
+    public void ExitGame(int index)
+    {
+        Application.Quit();
     }
 
     public IEnumerator LoadScene_Coroutine(int index)
@@ -30,6 +67,7 @@ public class SceneLoader : MonoBehaviour
                 progressSlider.value = 1;
                 asyncOperation.allowSceneActivation = true;
             }
+
             yield return null;
         }
     }
