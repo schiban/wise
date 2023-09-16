@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -800,8 +800,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Kai_Run_6: 902692446
-      Kai_Run_1: -1700305596
       Kai_Run_10: 880687715
+      Kai_Run_31: -1543152843
       Kai_Run_7: 2013848539
       Kai_Run_22: -624979809
       Kai_Run_23: -986742585
@@ -830,7 +830,7 @@ TextureImporter:
       Kai_Run_16: 2019072101
       Kai_Run_30: 559014009
       Kai_Run_17: -1093754179
-      Kai_Run_31: -1543152843
+      Kai_Run_1: -1700305596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

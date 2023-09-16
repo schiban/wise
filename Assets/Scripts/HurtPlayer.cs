@@ -7,7 +7,7 @@ public class HurtPlayer : MonoBehaviour
 {
     public int damageToGive;
     private HealthManager healthManager;
-    private float waitToHurt = 2f;
+    private float waitToHurt = 1f;
     private bool isTouching;
     private Animator animator;
 
@@ -51,14 +51,14 @@ public class HurtPlayer : MonoBehaviour
         healthManager.HurtPlayer(damageToGive);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            isTouching = true;
-            waitToHurt = 0f;
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.tag == "Player")
+    //     {
+    //         isTouching = true;
+    //         waitToHurt = 0f;
+    //     }
+    // }
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -73,7 +73,7 @@ public class HurtPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             isTouching = false;
-            waitToHurt = 2f;
+            waitToHurt = 1f;
         }
     }
 }

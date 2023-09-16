@@ -59,6 +59,8 @@ public class Player : MonoBehaviour
 
     [Header("Charge")]
     public bool isWise;
+
+    
     
     // Start é chamado no primeiro frame quando o script é iniciado
     private void Start()
@@ -98,6 +100,7 @@ public class Player : MonoBehaviour
 
                 // Mudança da posição do objeto, onde a posição atual e a velocidade são somadas ao produto entre o intervalo de tempo e o valor gerado pelo movimento
                 rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * input);
+                
 
                 animator.SetBool("isMoving", true);
                 animator.SetFloat("moveX", input.x);
@@ -106,6 +109,7 @@ public class Player : MonoBehaviour
             } 
             else
             {
+
                 animator.SetBool("isMoving", false);
                 animator.SetBool("isRunning", false);
             }
@@ -113,6 +117,7 @@ public class Player : MonoBehaviour
 
         if (animator.GetBool("isDead") == true)
         {
+            
             animator.SetFloat("speed", 0);
             animator.SetBool("isMoving", false);
             animator.SetBool("isRunning", false);
