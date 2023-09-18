@@ -5,23 +5,22 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float health;
-    public float currentHealth;
+    [SerializeField] private float maxHealth;
     private Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        currentHealth = health;
+        health = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health < currentHealth)
+        if (health < maxHealth && health > 0)
         {
-            currentHealth = health;
+            maxHealth = health;
             animator.SetTrigger("Hit");
-            
         }
 
         if (health <= 0)
@@ -35,6 +34,6 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
     }
 }

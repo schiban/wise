@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float health = 0f;
-    [SerializeField] private float maxHealth = 100f;
+    public float health;
+    public float maxHealth;
+    public bool isDead;
+    private Animator animator;
+    private RespawnPoint respawn;
 
-    private void Start()
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        respawn = FindObjectOfType<RespawnPoint>();
+    }
+
+    void Start()
     {
         health = maxHealth;
     }
 
-    public void UpdateHealth(float mod)
+    public void HurtPlayer(int damageToGive)
     {
-        health += mod;
+        animator.SetTrigger("Hit");
+        health -= damageToGive;
 
-        if (health > maxHealth)
+        if (health <= 0)
         {
-            health = maxHealth;
-        }
-        else if (health <= 0)
-        {
-            health = 0f;
-            Debug.Log("Player Respawn");
+            animator.SetBool("isDead", true);
+            isDead = true;
+            respawn.RespawnScene();
         }
     }
 }

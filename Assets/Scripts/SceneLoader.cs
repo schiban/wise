@@ -19,6 +19,7 @@ public class SceneLoader : MonoBehaviour
         helpUI.SetActive(false);
         creditsUI.SetActive(false);
         exitUI.SetActive(false);
+        
         mainMenuUI.SetActive(true);
     }
 

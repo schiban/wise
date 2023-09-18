@@ -5,24 +5,9 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
-    /*
-    FINISH POINT
-
-    [SerializedField] bool goNextLevel;
-    [SerializedFiled] string levelName;
+    [SerializeField] bool goNextLevel;
+    [SerializeField] string levelName;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -30,7 +15,7 @@ public class SceneController : MonoBehaviour
 
             if (goNextLevel)
             {
-                SceneControler.instance.NextLevel();
+                SceneController.instance.NextLevel();
             }
             else
             {
@@ -38,7 +23,6 @@ public class SceneController : MonoBehaviour
             }
         }
     }
-    */
     
     public void NextLevel()
     {
