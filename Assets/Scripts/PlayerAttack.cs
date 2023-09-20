@@ -5,33 +5,33 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [Header("Definições")]
-    public Animator animator;
+    [Header("Components")]
+    private Animator animator;
+    
+    [Header("Combat Settings")]
     public Transform attackPoint;
-    public LayerMask enemies;
+    public float attackRange = 1f;
+    public LayerMask target;
+    
+    [Header("Abilities Damage")]
+    [SerializeField] private float _jab;
+    [SerializeField] private float _cross;
+    [SerializeField] private float _megaCross;
+    [SerializeField] private float _wise;
     public bool isWise;
-    public float radius = 1f;
-    public float jabDamage; private float jab;
-    public float crossDamage; private float cross;
-    public float megaCrossDamage; private float megaCross;
-    public float wiseDamage;
 
-    void Start() // Start() é chamado no primeiro frame quando o script é iniciado
+    void Awake()
     {
         animator = GetComponent<Animator>();
-        jab = jabDamage;
-        cross = crossDamage;
-        megaCross = megaCrossDamage;
     }
 
-    // Update is called once per frame
-    void Update() // Update() é chamado uma vez por frame
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Jab();
         
         if (Input.GetKeyDown(KeyCode.Alpha2))
-           Cross();
+            Cross();
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
             MegaCross();
@@ -42,91 +42,129 @@ public class PlayerAttack : MonoBehaviour
         animator.SetBool("isWise", false);
     }
 
+    /// <summary>
+    /// Jab é executado sempre que o utlizador pressiona a tecla Alpha 1
+    /// </summary>
+
     public void Jab()
     {
         animator.SetTrigger("Jab");
+
         if (isWise)
-        {
             Debug.Log("Jab Wise");
-            jab *= wiseDamage;
-        }
         else
             Debug.Log("Jab");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
-        foreach (Collider2D enemyGameObject in enemy)
+        foreach (Collider2D enemy in enemies)
         {
+            enemy.GetComponent<EnemyHealth>().health -= _jab;
             Debug.Log("Enemy hit");
-            enemyGameObject.GetComponent<EnemyHealth>().health -= jab;
         }
     }
 
+    /// <summary>
+    /// Cross é executado sempre que o utlizador pressiona a tecla Alpha 2
+    /// </summary>
     public void Cross()
     {
         animator.SetTrigger("Cross");
+
         if (isWise)
-        {
             Debug.Log("Cross Wise");
-            cross *= wiseDamage;
-        }
         else
             Debug.Log("Cross");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
-        foreach (Collider2D enemyGameObject in enemy)
+        foreach (Collider2D enemy in enemies)
         {
+            enemy.GetComponent<EnemyHealth>().health -= _cross;
             Debug.Log("Enemy hit");
-            enemyGameObject.GetComponent<EnemyHealth>().health -= cross;
         }
     }
 
+    /// <summary>
+    /// MegaCross é executado sempre que o utlizador pressiona a tecla Alpha 3
+    /// </summary>
     public void MegaCross()
     {
         animator.SetTrigger("MegaCross");
+
         if (isWise)
-        {
             Debug.Log("Mega Cross Wise");
-            megaCross *= wiseDamage;
-        }
         else
             Debug.Log("Mega Cross");
 
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemies);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
-        foreach (Collider2D enemyGameObject in enemy)
+        foreach (Collider2D enemy in enemies)
         {
             Debug.Log("Enemy hit");
-            enemyGameObject.GetComponent<EnemyHealth>().health -= megaCross;
+            enemy.GetComponent<EnemyHealth>().health -= _megaCross;
         }
     }
 
+    /// <summary>
+    /// Wise é ativo sempre que o utlizador pressiona a tecla Alpha 4
+    /// </summary>
     public void Wise()
     {
         animator.SetTrigger("Wise");
-        isWise = true;
         animator.SetBool("isWise", isWise);
+
         Debug.Log("Wise");
+
         StartCoroutine(ResetWise());
-        StartCoroutine(wiseAnimation());
+        StartCoroutine(StartWise());
     }
 
-    IEnumerator wiseAnimation()
+    /// <summary>
+    /// Wise é ativo sempre que o utlizador pressiona a tecla Alpha 4 com duração de 2 segundos
+    /// </summary>
+    /// <remarks>
+    /// Passados 2 segundos, no animator, é trocada a camada para as animações com o Wise ativo.
+    /// Estando o Wise ativo, então o valor das habilidades é aumentado.
+    /// </remarks>
+    IEnumerator StartWise()
     {
         yield return new WaitForSeconds(2);
+
         animator.SetLayerWeight(1, 1);
+
+        isWise = true;
+
+        _jab *= _wise;
+        _cross *= _wise;
+        _megaCross *= _wise;
     }
 
+    /// <summary>
+    /// Finalização do power-up que tem 20 segundos
+    /// </summary>
+    /// <remarks>
+    /// Passados 20 segundos depois, no animator, é trocada a camada para as animações sem a chama.
+    /// Estando o Wise inativo, então o valor das habilidades voltam ao normal.
+    /// </remarks>
     IEnumerator ResetWise()
     {
         yield return new WaitForSeconds(20);
+
         animator.SetLayerWeight(1, 0);
+
         isWise = false;
+
+        _jab /= _wise;
+        _cross /= _wise;
+        _megaCross /= _wise;
     }
 
+    /// <summary>
+    /// Desenha no editor uma esfera do objeto attackPoint com o raio = attackRange
+    /// </summary>
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(attackPoint.position, radius);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

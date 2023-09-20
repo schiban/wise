@@ -4,26 +4,44 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float health = 0f;
-    [SerializeField] private float maxHealth = 100f;
+    [Header("Components")]
+    private Animator animator;
+    private RespawnPoint respawn;
 
-    private void Start()
+    [Header("Player Health")]
+    public float health;
+    public float maxHealth;
+    public bool isDead;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        respawn = FindObjectOfType<RespawnPoint>();
+    }
+
+    void Start()
     {
         health = maxHealth;
     }
 
-    public void UpdateHealth(float mod)
+    /// <summary>
+    /// Atualiza a vida do protagonista
+    /// </summary>
+    /// <param name="damageToGive">Dano recebido por um inimigo</param>
+    /// <param name="health">Vida do protagonista</param>
+    /// <param name="animator">Controlador de parâmetros do Animator</param>
+    /// <param name="isDead">Vivo ou morto</param>
+    /// <param name="respawn">Ativa o ecrã de recomeçar</param>
+    public void HurtPlayer(int damageToGive)
     {
-        health += mod;
+        animator.SetTrigger("Hit");
+        health -= damageToGive;
 
-        if (health > maxHealth)
+        if (health <= 0)
         {
-            health = maxHealth;
-        }
-        else if (health <= 0)
-        {
-            health = 0f;
-            Debug.Log("Player Respawn");
+            animator.SetBool("isDead", true);
+            isDead = true;
+            respawn.RespawnScene();
         }
     }
 }

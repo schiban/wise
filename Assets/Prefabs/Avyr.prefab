@@ -94,13 +94,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5443229216385513821}
   - component: {fileID: 5443229216385513818}
-  - component: {fileID: 5443229216385513819}
-  - component: {fileID: 5443229216385513820}
-  - component: {fileID: 3892763580942831079}
   - component: {fileID: 5443229216385513816}
   - component: {fileID: 5443229216385513766}
   - component: {fileID: 5443229216385513817}
   - component: {fileID: 9043846717515603280}
+  - component: {fileID: 4502746712644234230}
+  - component: {fileID: 2881771071952602778}
+  - component: {fileID: 1273531683418494390}
   m_Layer: 6
   m_Name: Avyr
   m_TagString: Player
@@ -177,58 +177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5443229216385513819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5443229216385513767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30489e8b7d08b0d46ab88bccaae94270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkSpeed: 2
-  _runSpeed: 5
-  attackPoint: {fileID: 5443229216874046894}
-  attackRange: 1
-  target:
-    serializedVersion: 2
-    m_Bits: 128
-  _jab: 2
-  _cross: 3
-  _megaCross: 4
-  _wise: 1.5
-  isWise: 0
---- !u!114 &5443229216385513820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5443229216385513767}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62d217082eac4445927109359c3d9f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
---- !u!114 &3892763580942831079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5443229216385513767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372dd04b399fc904db8d6b4fd0d3e580, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 50
-  maxHealth: 50
 --- !u!95 &5443229216385513816
 Animator:
   serializedVersion: 4
@@ -312,6 +260,56 @@ CircleCollider2D:
   m_Offset: {x: 0.0450058, y: -0.64}
   serializedVersion: 2
   m_Radius: 0.23521805
+--- !u!114 &4502746712644234230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443229216385513767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30489e8b7d08b0d46ab88bccaae94270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 2
+  runSpeed: 4
+--- !u!114 &2881771071952602778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443229216385513767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc8a8658b3b05d418c656565dd793e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 5443229216874046894}
+  attackRange: 1
+  target:
+    serializedVersion: 2
+    m_Bits: 128
+  _jab: 2
+  _cross: 3
+  _megaCross: 4
+  _wise: 1.5
+  isWise: 0
+--- !u!114 &1273531683418494390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443229216385513767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62d217082eac4445927109359c3d9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 50
 --- !u!1 &5443229216874046895
 GameObject:
   m_ObjectHideFlags: 0

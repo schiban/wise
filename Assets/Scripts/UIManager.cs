@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private HealthManager healthManager;
+    private PlayerHealth healthManager;
     public Slider healthBar;
 
     void Awake()
     {
-        healthManager = FindObjectOfType<HealthManager>();
+        healthManager = FindObjectOfType<PlayerHealth>();
     }
 
     void Update()
