@@ -5,23 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class EnemyAttack : MonoBehaviour
 {
+    [Header("Components")]
+    private Animator animator;
+    private EnemyMovement enemy;
+    private PlayerHealth player;
+
+    [Header("Abilities Damage")]
     public int damageToGive;
-    private PlayerHealth playerHealth;
     private float waitToHurt = 1f;
     private bool isTouching;
-    private Animator animator;
-    private EnemyMovement controller;
+    
 
     void Awake()
     {
-        playerHealth = FindObjectOfType<PlayerHealth>();
+        player = FindObjectOfType<PlayerHealth>();
         animator = GetComponent<Animator>();
-        controller = FindObjectOfType<EnemyMovement>();
+        enemy = FindObjectOfType<EnemyMovement>();
     }
 
     void Update()
     {
-        if (!playerHealth.isDead && !animator.GetBool("isDead"))
+        if (!player.isDead && !animator.GetBool("isDead"))
         {
             if (isTouching)
             {
@@ -35,14 +39,14 @@ public class EnemyAttack : MonoBehaviour
         }
         else
         {
-            controller.StopMoving();
+            enemy.StopMoving();
         }
     }
-
+    
     public void Cross()
     {
         animator.SetTrigger("Cross");
-        playerHealth.HurtPlayer(damageToGive);
+        player.HurtPlayer(damageToGive);
     }
 
     private void OnTriggerStay2D(Collider2D other)

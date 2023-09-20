@@ -13,8 +13,8 @@ public class DialogueControl : MonoBehaviour
 
     [Header("Definições")]
     public float typingSpeed;
-    private string[] sentences;
-    private int index;
+    public string[] sentences;
+    public int index;
     private bool isTyping = false;
     Dialogue dialogueScript;
 
@@ -71,10 +71,13 @@ public class DialogueControl : MonoBehaviour
                 speechText.text = "";
                 index = 0;
                 dialogueObject.SetActive(false);
+                dialogueScript.GetComponent<Dialogue>().enabled = false;
+                
                 // Access the Dialogue script and set the isDialogueActive value
                 if (dialogueScript != null)
+                {
                     dialogueScript.SetDialogueActive(false); // Change the value as needed
-
+                }
                 // GetComponent<Dialogue>().isDialogueActive = false;
             }
         }

@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    
     public float health;
     [SerializeField] private float maxHealth;
     private Animator animator;
 
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+    
+    void Start()
+    {
         health = maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (health < maxHealth && health > 0)
@@ -30,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    // O inimigo desaparece do mapa passado 1 segundo de ter morrido
     IEnumerator Death()
     {
         yield return new WaitForSeconds(1);

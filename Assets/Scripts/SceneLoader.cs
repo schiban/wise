@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [Header("Main Menu Components")]
     public GameObject introUI;
-    public GameObject loaderUI;
     public GameObject mainMenuUI;
     public GameObject helpUI;
     public GameObject creditsUI;
     public GameObject exitUI;
+    public GameObject loaderUI;
     public Slider progressSlider;
 
     public void MainMenuScene(int index)

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AreaTransitions : MonoBehaviour
 {
+    [Header("Components")]
     private CameraController cam;
     private Camera mainCamera;
-    public float newOrthographicSize;
 
+    [Header("Camera Settings")]
+    public float newOrthographicSize;
     public Vector2 newMinPosition;
     public Vector2 newMaxPosition;
 
@@ -23,7 +25,6 @@ public class AreaTransitions : MonoBehaviour
         {
             cam.minPosition = newMinPosition;
             cam.maxPosition = newMaxPosition;
-
             mainCamera.orthographicSize = newOrthographicSize;
         }
     }
