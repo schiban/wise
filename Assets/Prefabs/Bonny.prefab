@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3806638205503259012}
   - component: {fileID: 3417670176817923137}
-  m_Layer: 7
+  m_Layer: 19
   m_Name: Minimap Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24eb7ccb0f431459f871f6e575b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 20
+  damageToGive: 5
 --- !u!114 &3877501303230415273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,4 +285,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10
+  maxHealth: 20

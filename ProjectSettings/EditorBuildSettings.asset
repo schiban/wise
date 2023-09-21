@@ -18,9 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Village 1.unity
     guid: 73ef418d23e821a4490adf33a31de87e
   - enabled: 1
-    path: Assets/Scenes/Cutscene.unity
-    guid: 152bcec42c8a75f4d8ec7446467bd539
-  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 9d092f939d9fcee4cb5ee05e1bfc40f8
+  - enabled: 1
+    path: Assets/Scenes/Menu 1.unity
+    guid: d0442cedc3945744a9e843b0549ebad7
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: 152bcec42c8a75f4d8ec7446467bd539
   m_configObjects: {}

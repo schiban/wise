@@ -17,6 +17,7 @@ public class DialogueControlQuimZeion : MonoBehaviour
     public int index;
     private bool isTyping = false;
     DialogueQuimZeion dialogueScript;
+    public bool checkpoint;
 
     void Awake() {
         dialogueScript = FindObjectOfType<DialogueQuimZeion>();
@@ -72,6 +73,7 @@ public class DialogueControlQuimZeion : MonoBehaviour
                 index = 0;
                 dialogueObject.SetActive(false);
                 dialogueScript.GetComponent<DialogueQuimZeion>().enabled = false;
+                checkpoint = true;
                 
                 // Access the Dialogue script and set the isDialogueActive value
                 if (dialogueScript != null)
