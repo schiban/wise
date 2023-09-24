@@ -34,7 +34,6 @@ public class DialogueControlQuimZeion : MonoBehaviour
     {
         if (dialogueScript.isDialogueActive == true)
         {
-            // Listen for keyboard input to advance dialogue
             if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
             {
                 NextSentence();
@@ -55,8 +54,8 @@ public class DialogueControlQuimZeion : MonoBehaviour
 
     public void NextSentence()
     {
-        if (isTyping) return; // Check if typing is in progress 
-
+        if (isTyping) return;
+        
         if(speechText.text.Length == sentences[index].Length)
         {
             // ainda tem textos
@@ -75,12 +74,10 @@ public class DialogueControlQuimZeion : MonoBehaviour
                 dialogueScript.GetComponent<DialogueQuimZeion>().enabled = false;
                 checkpoint = true;
                 
-                // Access the Dialogue script and set the isDialogueActive value
                 if (dialogueScript != null)
                 {
-                    dialogueScript.SetDialogueActive(false); // Change the value as needed
+                    dialogueScript.SetDialogueActive(false);
                 }
-                // GetComponent<Dialogue>().isDialogueActive = false;
             }
         }
     }

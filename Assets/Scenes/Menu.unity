@@ -3700,6 +3700,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 760166980}
     - target: {fileID: 9074563613188470131, guid: cc9d09ab1bbdfa84ca239456a192f351, type: 3}
+      propertyPath: timeline
+      value: 
+      objectReference: {fileID: 2085030261}
+    - target: {fileID: 9074563613188470131, guid: cc9d09ab1bbdfa84ca239456a192f351, type: 3}
       propertyPath: creditsUI
       value: 
       objectReference: {fileID: 1029152891}

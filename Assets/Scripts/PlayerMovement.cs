@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     private float currentSpeed;
     private bool isRunning;
 
+    private bool isMoving; // Variable to check if there is any movement input
+
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -31,7 +34,9 @@ public class PlayerMovement : MonoBehaviour
         if (input.x != 0)
             input.y = 0;
 
-        if (input != Vector2.zero && animator.GetBool("isDead") == false)
+        isMoving = input != Vector2.zero;
+
+        if (isMoving && animator.GetBool("isDead") == false)
         {
             // Se isRunning for verdadeiro, então currentSpeed = runSpeed
             // Caso contrário, currentSpeed = walkSpeed
@@ -52,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Verificação se existe movimento e se o Left Shift está a ser pressionado
-        if (Input.GetKey(KeyCode.LeftShift) && input != Vector2.zero)
+        if (Input.GetKey(KeyCode.LeftShift) && isMoving)
         {
             isRunning = true;
             animator.SetBool("isRunning", true);
