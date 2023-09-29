@@ -15,7 +15,7 @@ public class DialogueIlde : MonoBehaviour
     public bool isDialogueActive;
     bool onRadius;
     
-    private void Start()
+    void Awake()
     {
         dc = FindObjectOfType<DialogueControlIlde>();
     }

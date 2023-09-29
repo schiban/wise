@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float runSpeed;
     private float currentSpeed;
     private bool isRunning;
-
     private bool isMoving; // Variable to check if there is any movement input
 
 

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class RespawnLoader : MonoBehaviour
 {
     public GameObject respawnUI;
-
+    
     void Start()
     {
         respawnUI.SetActive(false);

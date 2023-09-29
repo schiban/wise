@@ -18,23 +18,33 @@ public class PauseMenu : MonoBehaviour
     {
         allEnemiesInactive = true;
 
-        // Check if any enemy is active
+        // Verificação da existência dos inimigos
         foreach (GameObject enemy in enemies)
         {
             if (enemy.activeSelf)
             {
                 allEnemiesInactive = false;
-                break; // Exit the loop as soon as an active enemy is found
+                break;
             }
         }
 
-        // If all enemies are inactive, call Victory()
+        // Se todos os inimigos foram eliminados
         if (allEnemiesInactive)
         {
             Victory();
         }
 
-        if (Input.GetKey(KeyCode.P) || Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.P) && !introUI.activeSelf && !pauseMenuUI.activeSelf && !victoryUI.activeSelf && !exitUI.activeSelf)
+        {
+            Pause();
+        }
+
+        if (Input.GetKey(KeyCode.Escape) && pauseMenuUI.activeSelf)
+        {
+            Resume();
+        }
+
+        if(Input.GetKey(KeyCode.Escape) && !pauseMenuUI.activeSelf && exitUI.activeSelf)
         {
             Pause();
         }
@@ -42,12 +52,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        exitUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Resume();
-        }
     }
 
     public void Victory()
@@ -78,7 +85,7 @@ public class PauseMenu : MonoBehaviour
     public void CreditScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(5);
     }
 
     public void ExitScene()

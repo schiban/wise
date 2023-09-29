@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -43,10 +41,6 @@ public class PlayerAttack : MonoBehaviour
         }
         animator.SetBool("isWise", false);
     }
-
-    /// <summary>
-    /// Jab é executado sempre que o utlizador pressiona a tecla Alpha 1
-    /// </summary>
 
     public void PerformAttack(string attack, float damage)
     {
