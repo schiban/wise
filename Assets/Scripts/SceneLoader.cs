@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -13,6 +14,17 @@ public class SceneLoader : MonoBehaviour
     public GameObject exitUI;
     public GameObject loaderUI;
     public Slider progressSlider;
+    public PlayableDirector timeline;
+
+    void Start()
+    {
+        Time.timeScale = 1;
+        if (timeline != null)
+        {
+            timeline.time = 0; // Reset the timeline to the beginning.
+            timeline.Play();    // Start playing the timeline.
+        }
+    }
 
     public void MainMenuScene(int index)
     {

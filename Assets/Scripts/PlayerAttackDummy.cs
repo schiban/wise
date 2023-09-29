@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttackDummy : MonoBehaviour
@@ -12,12 +10,11 @@ public class PlayerAttackDummy : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 1f;
     public LayerMask target;
-    
     [Header("Abilities Damage")]
-    [SerializeField] private float _jab;
-    [SerializeField] private float _cross;
-    [SerializeField] private float _megaCross;
-    [SerializeField] private float _wise;
+    [SerializeField] private float jab;
+    [SerializeField] private float cross;
+    [SerializeField] private float megaCross;
+    [SerializeField] private float wise;
     public bool isWise;
 
     void Awake()
@@ -27,137 +24,77 @@ public class PlayerAttackDummy : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            Jab();
-        
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            Cross();
+        if(animator.GetBool("isDead") == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                PerformAttack("Jab", jab);
+            
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                PerformAttack("Cross", cross);
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            MegaCross();
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+                PerformAttack("MegaCross", megaCross);
 
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            Wise();
-
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+                Wise("Wise");
+        }
         animator.SetBool("isWise", false);
     }
 
-    /// <summary>
-    /// Jab é executado sempre que o utlizador pressiona a tecla Alpha 1
-    /// </summary>
-
-    public void Jab()
+    public void PerformAttack(string attack, float damage)
     {
-        animator.SetTrigger("Jab");
+        animator.SetTrigger(attack);
 
         if (isWise)
-            Debug.Log("Jab Wise");
+            Debug.Log(attack + " Wise");
         else
-            Debug.Log("Jab");
+            Debug.Log(attack);
 
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
 
         foreach (Collider2D enemy in enemies)
         {
-            enemy.GetComponent<Dummy>().health -= _jab;
+            enemy.GetComponent<Dummy>().health -= damage;
             Debug.Log("Enemy hit");
-        }
-    }
-
-    /// <summary>
-    /// Cross é executado sempre que o utlizador pressiona a tecla Alpha 2
-    /// </summary>
-    public void Cross()
-    {
-        animator.SetTrigger("Cross");
-
-        if (isWise)
-            Debug.Log("Cross Wise");
-        else
-            Debug.Log("Cross");
-
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
-
-        foreach (Collider2D enemy in enemies)
-        {
-            enemy.GetComponent<Dummy>().health -= _cross;
-            Debug.Log("Enemy hit");
-        }
-    }
-
-    /// <summary>
-    /// MegaCross é executado sempre que o utlizador pressiona a tecla Alpha 3
-    /// </summary>
-    public void MegaCross()
-    {
-        animator.SetTrigger("MegaCross");
-
-        if (isWise)
-            Debug.Log("Mega Cross Wise");
-        else
-            Debug.Log("Mega Cross");
-
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, target);
-
-        foreach (Collider2D enemy in enemies)
-        {
-            Debug.Log("Enemy hit");
-            enemy.GetComponent<Dummy>().health -= _megaCross;
         }
     }
 
     /// <summary>
     /// Wise é ativo sempre que o utlizador pressiona a tecla Alpha 4
     /// </summary>
-    public void Wise()
+    public void Wise(string attack)
     {
-        animator.SetTrigger("Wise");
+        animator.SetTrigger(attack);
         animator.SetBool("isWise", isWise);
+        Debug.Log(attack);
 
-        Debug.Log("Wise");
-
-        StartCoroutine(ResetWise());
-        StartCoroutine(StartWise());
+        StartCoroutine(WiseDuration());
     }
 
     /// <summary>
-    /// Wise é ativo sempre que o utlizador pressiona a tecla Alpha 4 com duração de 2 segundos
+    /// Controlo do tempo de duração do powerup
     /// </summary>
     /// <remarks>
     /// Passados 2 segundos, no animator, é trocada a camada para as animações com o Wise ativo.
     /// Estando o Wise ativo, então o valor das habilidades é aumentado.
-    /// </remarks>
-    IEnumerator StartWise()
-    {
-        yield return new WaitForSeconds(2);
-
-        animator.SetLayerWeight(1, 1);
-
-        isWise = true;
-
-        _jab *= _wise;
-        _cross *= _wise;
-        _megaCross *= _wise;
-    }
-
-    /// <summary>
-    /// Finalização do power-up que tem 20 segundos
-    /// </summary>
-    /// <remarks>
     /// Passados 20 segundos depois, no animator, é trocada a camada para as animações sem a chama.
     /// Estando o Wise inativo, então o valor das habilidades voltam ao normal.
     /// </remarks>
-    IEnumerator ResetWise()
+    IEnumerator WiseDuration()
     {
+        yield return new WaitForSeconds(2);
+        animator.SetLayerWeight(1, 1);
+        isWise = true;
+        jab *= wise;
+        cross *= wise;
+        megaCross *= wise;
+
         yield return new WaitForSeconds(20);
-
         animator.SetLayerWeight(1, 0);
-
         isWise = false;
-
-        _jab /= _wise;
-        _cross /= _wise;
-        _megaCross /= _wise;
+        jab /= wise;
+        cross /= wise;
+        megaCross /= wise;
     }
 
     /// <summary>

@@ -5,12 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject introUI;
-    public GameObject pauseMenuUI;
-    public GameObject victoryUI;
-    public GameObject exitUI;
-
-    public GameObject enemy, enemy1, enemy2, enemy3, enemy4, enemy5, enemy6;
+    public GameObject introUI, pauseMenuUI, victoryUI, exitUI;
+    public List<GameObject> enemies;
+    private bool allEnemiesInactive;
 
     void Start()
     {
@@ -19,12 +16,35 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (enemy.activeSelf == false && enemy1.activeSelf == false && enemy2.activeSelf == false && enemy3.activeSelf == false && enemy4.activeSelf == false && enemy5.activeSelf == false && enemy6.activeSelf == false) 
+        allEnemiesInactive = true;
+
+        // Verificação da existência dos inimigos
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.activeSelf)
+            {
+                allEnemiesInactive = false;
+                break;
+            }
+        }
+
+        // Se todos os inimigos foram eliminados
+        if (allEnemiesInactive)
         {
             Victory();
         }
 
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKey(KeyCode.P) && !introUI.activeSelf && !pauseMenuUI.activeSelf && !victoryUI.activeSelf && !exitUI.activeSelf)
+        {
+            Pause();
+        }
+
+        if (Input.GetKey(KeyCode.Escape) && pauseMenuUI.activeSelf)
+        {
+            Resume();
+        }
+
+        if(Input.GetKey(KeyCode.Escape) && !pauseMenuUI.activeSelf && exitUI.activeSelf)
         {
             Pause();
         }
@@ -32,12 +52,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        exitUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Resume();
-        }
     }
 
     public void Victory()
@@ -61,22 +78,23 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenuScene()
     {
-        SceneManager.LoadSceneAsync(5);
+        Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void CreditScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 2);
-        // SceneManager.LoadSceneAsync(6);
+        Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(5);
     }
 
-    public void ExitScene(int index)
+    public void ExitScene()
     {
         pauseMenuUI.SetActive(false);
         exitUI.SetActive(true);
     }
 
-    public void ExitGame(int index)
+    public void ExitGame()
     {
         Application.Quit();
     }

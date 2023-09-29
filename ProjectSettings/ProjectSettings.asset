@@ -273,17 +273,17 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d3660a827c12a8141b9023523392be7b, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d3660a827c12a8141b9023523392be7b, type: 3}
       m_Width: 512
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d3660a827c12a8141b9023523392be7b, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
@@ -315,7 +315,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 012e31c41b9b8de4782cf99d152c586c, type: 3}
+      m_Icon: {fileID: 2800000, guid: d3660a827c12a8141b9023523392be7b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

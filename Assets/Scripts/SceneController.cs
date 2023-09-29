@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
-
     [SerializeField] bool goNextLevel;
     [SerializeField] string levelName;
     

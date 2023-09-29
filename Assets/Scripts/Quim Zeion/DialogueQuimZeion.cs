@@ -13,7 +13,7 @@ public class DialogueQuimZeion : MonoBehaviour
 
     private DialogueControlQuimZeion dc;
     public bool isDialogueActive;
-    bool onRadius;
+    public bool onRadius;
     
     private void Start()
     {

@@ -77,13 +77,11 @@ public class DialogueControlMatibel : MonoBehaviour
                 index = 0;
                 dialogueObject.SetActive(false);
                 dialogueScript.GetComponent<DialogueMatibel>().enabled = false;
-                
-                // Access the Dialogue script and set the isDialogueActive value
+
                 if (dialogueScript != null)
                 {
-                    dialogueScript.SetDialogueActive(false); // Change the value as needed
+                    dialogueScript.SetDialogueActive(false);
                 }
-                // GetComponent<Dialogue>().isDialogueActive = false;
             }
         }
     }
